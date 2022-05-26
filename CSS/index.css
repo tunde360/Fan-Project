@@ -1,0 +1,66 @@
+#area {
+    margin: 0px 450px 0 450px;
+    width: 900px;
+}
+
+body {
+    background-color: dimgrey;
+}
+
+.fanBody {
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-radius: 150px;
+    border-color: black;
+    border-width: 5px;
+    background-color: darkgoldenrod;
+    position: relative;
+}
+.fanBody::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    background-color: darkgoldenrod;
+    width: 15px;
+    height: 15px;
+    transform: translate(-15%, -50%);
+    border-radius: 50%;
+}
+
+.hand {
+    position: absolute;
+    width: 13px;
+    transform: rotate(calc(var(--rotation) * 1deg));
+    height: 293px;
+    top: 1%;
+    left: 49%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: black;
+}
+
+.fanBody .hand-1 { --rotation : 0deg; }
+.fanBody .hand-2 { --rotation : 72deg; }
+.fanBody .hand-3 { --rotation : 144deg; }
+.fanBody .hand-4 { --rotation : 216deg; }
+.fanBody .hand-5 { --rotation : 288deg; }
+
+.fanLeg {
+    margin: -2px auto 0 142px;
+    height: 300px;
+    width: 40px;
+    background-color: black;
+}
+
+#start {
+    margin-top: 40px;
+    width: 41px;
+}
+
+#off {
+    margin-top: 10px;
+    width: 41px;
+}
