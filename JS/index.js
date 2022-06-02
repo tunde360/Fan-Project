@@ -14,9 +14,22 @@ let degreeThree = 144;
 let degreeFour = 216;
 let degreeFive= 288;
 
+function startLook () {
+        degreeOne++;
+        degreeTwo++;
+        degreeThree++;
+        degreeFour++;
+        degreeFive++;
+        hONE.style.transform = 'rotate(' + degreeOne + 'deg)';
+        hTWO.style.transform = 'rotate(' + degreeTwo + 'deg)';
+        hTHREE.style.transform = 'rotate(' + degreeThree + 'deg)';
+        hFOUR.style.transform = 'rotate(' + degreeFour + 'deg)';
+        hFIVE.style.transform = 'rotate(' + degreeFive + 'deg)';
+}
 
+startLook();
 
-onBtn.addEventListener('click', () => {
+function onIt () {
     runner = setInterval(function(){
         degreeOne++;
         degreeTwo++;
@@ -29,37 +42,10 @@ onBtn.addEventListener('click', () => {
         hFOUR.style.transform = 'rotate(' + degreeFour + 'deg)';
         hFIVE.style.transform = 'rotate(' + degreeFive + 'deg)';
     }, 25);
-});
+}
 
-// offBtn.addEventListener('click', () => {
-//     clearInterval(runner);
-// })
+onBtn.addEventListener('click', onIt);
 
 offBtn.addEventListener('click', () => {
-    const runTime = setInterval(function(){
-        degreeOne++
-        degreeTwo++
-        degreeThree++
-        degreeFour++
-        degreeFive++
-        hONE.style.transform = 'rotate(' + degreeOne + 'deg)'
-        hTWO.style.transform = 'rotate(' + degreeTwo + 'deg)'
-        hTHREE.style.transform = 'rotate(' + degreeThree + 'deg)'
-        hFOUR.style.transform = 'rotate(' + degreeFour + 'deg)'
-        hFIVE.style.transform = 'rotate(' + degreeFive + 'deg)'}, 10);
-
-    const lowTime = setInterval(function(){
-        degreeOne++
-        degreeTwo++
-        degreeThree++
-        degreeFour++
-        degreeFive++
-        hONE.style.transform = 'rotate(' + degreeOne + 'deg)'
-        hTWO.style.transform = 'rotate(' + degreeTwo + 'deg)'
-        hTHREE.style.transform = 'rotate(' + degreeThree + 'deg)'
-        hFOUR.style.transform = 'rotate(' + degreeFour + 'deg)'
-        hFIVE.style.transform = 'rotate(' + degreeFive + 'deg)'}, 0);
-    for (let runner = runTime;  runner = lowTime;) {
-            
-    }
+    clearInterval(runner);
 })

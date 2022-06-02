@@ -14,7 +14,7 @@ body {
     border-radius: 150px;
     border-color: black;
     border-width: 5px;
-    background-color: darkgoldenrod;
+    background-color: green;
     position: relative;
 }
 .fanBody::after {
@@ -23,7 +23,7 @@ body {
     top: 50%;
     left: 50%;
     z-index: 11;
-    background-color: darkgoldenrod;
+    background-color: green;
     width: 15px;
     height: 15px;
     transform: translate(-15%, -50%);
@@ -33,7 +33,7 @@ body {
 .hand {
     position: absolute;
     width: 13px;
-    transform: rotate(calc(var(--rotation) * 1deg));
+    transform: rotate(calc(var(--rotation) * 72deg));
     height: 293px;
     top: 1%;
     left: 49%;
